@@ -27,6 +27,7 @@ public class PA2a {
 		int neg = 0;
 		double avgPos, avgNeg, avgTotal;
 		
+		// User inputs the following numbers that will be saved from num1 to num5.
 		System.out.printf("Enter five whole numbers: ");
 		num1 = scanner.nextInt();
 		num2 = scanner.nextInt();
@@ -34,6 +35,10 @@ public class PA2a {
 		num4 = scanner.nextInt();
 		num5 = scanner.nextInt();
 		scanner.close();
+		
+		// If statements that will determine if the numbers are positive or negative inputs
+		// If they are positive then they will be added to the total positive numbers
+		// Otherwise it will go be added to the total of negative numbers 
 		
 		if (num1 > 0) {
 			posNum = posNum + num1;
@@ -71,10 +76,13 @@ public class PA2a {
 			neg++;
 		}	
 		
-		
+		// Calculates the sum of all the numbers
 		sumNum = num1 + num2 + num3 + num4 + num5;
+		
+		// Calculates the average of all numbers 
 		avgTotal = sumNum / 5.0;
 		
+		// If statements to find the averages without doing division
 		if (pos > 0) {
 			avgPos = (posNum * 1.0)/pos;
 		} else { 
@@ -86,6 +94,7 @@ public class PA2a {
 			avgNeg = 0;
 		}
 		
+		// If statements that will determine the output 
 		if (pos == 1 && neg > 1) {
 			System.out.printf("The sum of the %d positive number: %d%n", pos, posNum);
 			System.out.printf("The sum of the %d non-positive numbers: %d%n", neg, nonPosNum);
